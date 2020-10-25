@@ -1,0 +1,30 @@
+{
+  "name": "nspad",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build:windows": "electron-builder --win --dir",
+    "dist:windows": "electron-builder --win",
+    "publish:github": "electron-builder --win -p always"
+  },
+  "build": {
+    "appId": "com.netscribepro.nspad",
+    "publish": {
+      "provider": "github",
+      "owner": "MikeLindvang",
+      "repo": "NSPad"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.5",
+    "simplemde": "^1.11.2"
+  }
+}
