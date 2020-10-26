@@ -14,7 +14,7 @@ app.on('ready', () => {
     });
     window.loadFile('index.html');
 
-    // autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.checkForUpdatesAndNotify();
 });
 
 Menu.setApplicationMenu(menu);
