@@ -52,8 +52,12 @@ const {
       title: 'Save markdown file',
       filters: [
         {
-          name: 'MyFile',
-          extensions: ['md']
+          name: 'markdown',
+          extensions: ['md',]
+        },
+        {
+          name: 'text',
+          extensions: ['txt']
         }
       ]
     };
@@ -74,6 +78,18 @@ const {
       label: 'File',
       submenu: [
         {
+          label: 'New',
+          accelerator: 'CommandOrControl+N',
+          click() {
+            saveFile();
+            const window = BrowserWindow.getFocusedWindow();
+            window.webContents.send('editor-event', 'new-doc');
+          }
+        },
+        {
+          type: 'separator'
+        },
+        {
           label: 'Open',
           accelerator: 'CommandOrControl+O',
           click() {
@@ -85,6 +101,7 @@ const {
           accelerator: 'CommandOrControl+S',
           click() {
             saveFile();
+            
           }
         }
       ]

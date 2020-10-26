@@ -12,29 +12,17 @@
       rel="stylesheet"
       href="./node_modules/simplemde/dist/simplemde.min.css"
     />
+    <link rel="stylesheet" href="css/editor.css" />
     <script src="./node_modules/simplemde/dist/simplemde.min.js"></script>
     <script src="renderer.js"></script>
-    <style>
-      html,
-      body {
-        height: 100%;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-      }
-
-      .CodeMirror {
-        flex: 1;
-      }
-    </style>
   </head>
   <body ondrop="dropHandler(event);">
     <textarea id="editor"></textarea>
 
     <script>
       var editor = new SimpleMDE({
-    element: document.getElementById('editor')
-  });
+        element: document.getElementById("editor"),
+      });
     </script>
   </body>
 </html>

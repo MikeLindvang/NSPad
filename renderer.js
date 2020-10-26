@@ -13,6 +13,10 @@
     if (arg === 'save') {
       event.sender.send('save', editor.value());
     }
+
+    if(arg === 'new-doc') {
+      event.sender.send('new-doc', editor.value(''));
+    }
   });
 
   ipcRenderer.on('load', (event, content) => {
